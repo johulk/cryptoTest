@@ -1,0 +1,76 @@
+#aside {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+#aside .user-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+#aside .user-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#aside .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#aside .user-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #394048;
+}
+
+#aside .user-username {
+    font-size: 0.85rem;
+    color: #6a7785;
+}
+
+#aside .nav-menu {
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 0.5rem 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+#aside .nav-menu li {
+}
+
+#aside .nav-menu li.selected {
+    background-color: #fbfbfb;
+    border-left: 0.2rem solid #1e7ef9;
+}
+
+#aside .nav-menu li.selected .nav-icon {
+    color: #1e7ef9;
+}
+
+#aside .nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #394048;
+    padding: 1rem 1.5rem;
+}
+
+#aside .nav-menu a:hover {
+    background-color: #fbfbfb;
+}
+
+#aside .nav-icon {
+    font-size: 1.5rem;
+    color: #b8bbc2;
+}

@@ -1,0 +1,83 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+#header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#header .logo {
+  height: 35px;
+  width: auto;
+}
+
+#header .name {
+  color: #394048;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#header .search-bar {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  background-color: #f4f5f9;
+  color: #b8bbc2;
+  font-size: 0.9rem;
+}
+
+#header .search-bar input {
+  width: 20rem;
+  color: black;
+}
+
+#header .search-bar input::placeholder {
+  color: #b8bbc2;
+}
+
+#header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#header .nav-links li button {
+  display: flex;
+  background-color: #1e7ef9;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  gap: 0.5rem;
+}
+
+#header .nav-links li button:hover {
+  background-color: black;
+}
+
+#header .nav-links li a {
+  transition: all 0.2s ease-in-out;
+  color: #394048;
+}
+
+#header .nav-links li a:hover {
+  color: #1e7ef9;
+}

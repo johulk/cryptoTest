@@ -1,0 +1,291 @@
+/* Import Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* Main container styles */
+.authContainer {
+  overflow: hidden;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.authContent {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 810px;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Background image */
+.backgroundImage {
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Banner styles (top navigation) */
+.banner {
+  display: flex;
+  position: absolute;
+  gap: 1.875rem;
+  align-items: center;
+  padding: 1.6875rem 0.46875rem 1.6875rem 1.6875rem;
+  max-width: 100%;
+  font-size: 1.125rem;
+  text-align: center;
+  white-space: nowrap;
+  min-height: 106.5px;
+  color: #1e293b;
+  width: 345px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: stretch;
+  margin: auto 0;
+  aspect-ratio: 1/1;
+  width: 56.25px;
+}
+
+.navItem {
+  align-self: stretch;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+/* Forms container with overflow hidden to contain sliding forms */
+.formsContainer {
+  position: relative;
+  width: 450px;
+  height: 600px; /* Fixed height to ensure consistent sliding */
+  overflow: hidden;
+  border-radius: 21.75px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.25);
+  /* Apply backdrop filter to the container to ensure it's maintained during transitions */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Sliding forms wrapper - Improved transition */
+.formsWrapper {
+  display: flex;
+  width: 200%; /* Double width to contain both forms */
+  height: 100%;
+  /* Enhanced transition properties for smoother animation */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform; /* Optimize for animation performance */
+  position: relative;
+}
+
+/* When register is active, slide to the left */
+.registerActive {
+  transform: translateX(-100%);
+}
+
+/* Base styles for both forms */
+.formBase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1.875rem 6.75rem;
+  width: 50%; /* Each form takes half of the wrapper width */
+  height: 100%;
+  color: black;
+  font-size: 1.125rem;
+  /* Remove backdrop filter from individual forms since it's now on the container */
+  background-color: transparent;
+  border: 3.25px solid white;
+  border-radius: 21.75px;
+  /* Add transition for content opacity to enhance the sliding effect */
+  transition: opacity 0.4s ease;
+}
+
+/* Register form specific styles - reduced top padding */
+.registerForm {
+  padding-top: 2rem;
+}
+
+/* Apply different spacing to first input in register form */
+.registerForm .firstInput {
+  margin-top: 2rem;
+}
+
+/* Title styles */
+.formTitle {
+  align-self: stretch;
+  padding: 0.75rem;
+  font-size: 2.4375rem;
+  text-align: center;
+  white-space: nowrap;
+  color: #020a2d;
+  margin-bottom: 2.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* Input field styles */
+.inputField {
+  overflow: hidden;
+  align-self: stretch;
+  padding-top: 0.9375rem;
+  margin-top: 2rem;
+  white-space: nowrap;
+  border: none;
+  border-bottom: 3px solid #1e293b;
+  font-size: 1.3125rem;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  color: black;
+  /* Add transition for smoother focus effects */
+  transition: border-color 0.3s ease;
+}
+
+/* Darker placeholder text styles for all browsers */
+.inputField::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* Darker placeholder text */
+  opacity: 1; /* Firefox */
+  font-weight: 500;
+}
+
+
+.inputField:focus {
+  border-bottom-color: #3b82f6;
+}
+
+.firstInput {
+  margin-top: 4rem;
+}
+
+/* Button styles - Fixed alignment of text */
+.authButton {
+  overflow: hidden;
+  padding: 1.3125rem 3.75rem;
+  margin-top: 4rem;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+  border-radius: 1.125rem;
+  background-color: #020a2d;
+  width: 337.5px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add transition for hover effect */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.authButton:hover {
+  background-color: #0f172a;
+  transform: translateY(-2px);
+}
+
+.authButton:active {
+  transform: translateY(0);
+}
+
+/* Link styles */
+.authLink {
+  align-self: center;
+  padding: 0.75rem;
+  margin-top: 3.5rem;
+  text-align: center;
+  border-bottom: 0.75px solid #1e293b;
+  width: 300px;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+  font-size: 1.125rem;
+  font-style: italic;
+  /* Add transition for hover effect */
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.authLink:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .authContent {
+    padding: 0.75rem;
+  }
+
+  .banner {
+    padding-left: 0.9375rem;
+  }
+
+  .formsContainer {
+    width: 90%;
+    max-width: 450px;
+  }
+
+  .formBase {
+    padding: 3rem 1.125rem 5.25rem;
+  }
+
+  .registerForm {
+    padding-top: 1.5rem;
+  }
+
+  .inputField {
+    padding: 0.75rem 0;
+  }
+
+  .authButton {
+    padding: 1.125rem 0.9375rem;
+    margin-top: 3.5rem;
+    width: 90%;
+    max-width: 337.5px;
+  }
+
+  .authLink {
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+.errorMessage {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
